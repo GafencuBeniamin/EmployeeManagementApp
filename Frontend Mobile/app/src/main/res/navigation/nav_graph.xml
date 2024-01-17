@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.scd_proiect_mobile_android.ui.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_addDepartmentFragment"
+            app:destination="@id/addDepartmentFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_editDepartmentFragment"
+            app:destination="@id/editDepartmentFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_editEmployeeFragment"
+            app:destination="@id/editEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.scd_proiect_mobile_android.ui.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDepartmentFragment"
+        android:name="com.example.scd_proiect_mobile_android.ui.AddDepartmentFragment"
+        android:label="Add Department"
+        tools:layout="@layout/fragment_add_department" >
+        <action
+            android:id="@+id/action_addDepartmentFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.example.scd_proiect_mobile_android.ui.AddEmployeeFragment"
+        android:label="Add Employee"
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/action_addEmployeeFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDepartmentFragment"
+        android:name="com.example.scd_proiect_mobile_android.ui.EditDepartmentFragment"
+        android:label="Edit Department"
+        tools:layout="@layout/fragment_edit_department" >
+        <action
+            android:id="@+id/action_editDepartmentFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEmployeeFragment"
+        android:name="com.example.scd_proiect_mobile_android.ui.EditEmployeeFragment"
+        android:label="Edit Employee"
+        tools:layout="@layout/fragment_edit_employee" >
+        <action
+            android:id="@+id/action_editEmployeeFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+</navigation>

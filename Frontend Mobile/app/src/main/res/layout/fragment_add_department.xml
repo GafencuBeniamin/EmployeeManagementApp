@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddDepartmentFragment">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/department_svg"
+        app:tint="@color/white"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/parent_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="ID Parinte:"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/parent_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/parent_title"
+        app:layout_constraintTop_toTopOf="@id/parent_title"
+        app:layout_constraintBottom_toBottomOf="@id/parent_title"
+        android:backgroundTint="@color/white"
+        android:inputType="phone"
+        android:minWidth="50dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/description_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/parent_title"
+        app:layout_constraintLeft_toLeftOf="@id/parent_title"
+        android:layout_marginTop="50dp"
+        android:text="Descriere:"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/description_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/description_title"
+        app:layout_constraintBottom_toBottomOf="@id/description_title"
+        app:layout_constraintLeft_toRightOf="@id/description_title"
+        android:minWidth="200dp"
+        android:backgroundTint="@color/white" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm and add new Department"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="100dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
